@@ -23,29 +23,48 @@ I'm **Animesh Kumar**, a Master's student in Computer Science at Arizona State U
 
 ## 🚀 Featured Projects
 
-<div class="project-card">
-  <h3>🏥 Medical Premium Prediction System</h3>
-  <p><strong>Achievement:</strong> 88.87% R² accuracy with comprehensive model interpretability</p>
-  <p>Developed end-to-end ML pipeline using Random Forest, XGBoost, and SHAP analysis for insurance premium prediction.</p>
-  <p><strong>Tech Stack:</strong> Python, scikit-learn, XGBoost, SHAP</p>
-  <a href="./projects/medical-premium.html">Learn More →</a>
-</div>
+### 🏥 Medical Premium Prediction System
+**Achievement:** 88.87% R² accuracy with comprehensive model interpretability
 
-<div class="project-card">
-  <h3>🎤 Speech Recognition Models</h3>
-  <p><strong>Achievement:</strong> 94.03% accuracy with Transformer architecture</p>
-  <p>Comprehensive comparison of CNN, LSTM, and Transformer architectures for speech command recognition.</p>
-  <p><strong>Tech Stack:</strong> TensorFlow, PyTorch, Attention Mechanisms</p>
-  <a href="./projects/speech-recognition.html">Learn More →</a>
-</div>
+Developed end-to-end ML pipeline using Random Forest, XGBoost, and SHAP analysis for insurance premium prediction.
 
-<div class="project-card">
-  <h3>📱 Mobile Edge Computing with DDQN</h3>
-  <p><strong>Focus:</strong> Energy-efficient task scheduling optimization</p>
-  <p>Designed AI-driven mobile computing system using Double Deep Q-Networks for optimal resource allocation.</p>
-  <p><strong>Tech Stack:</strong> Reinforcement Learning, Mobile Computing</p>
-  <a href="./projects/mobile-edge.html">Learn More →</a>
-</div>
+**Tech Stack:** Python, scikit-learn, XGBoost, SHAP
+
+[Learn More →](./medical-premium)
+
+### 🎤 Speech Recognition Models
+**Achievement:** 94.03% accuracy with Transformer architecture
+
+Comprehensive comparison of CNN, LSTM, and Transformer architectures for speech command recognition with attention mechanisms.
+
+**Tech Stack:** TensorFlow, PyTorch, Attention Mechanisms
+
+[Learn More →](./speech-recognition)
+
+### 📱 Mobile Edge Computing with DDQN
+**Focus:** Energy-efficient task scheduling optimization
+
+Designed AI-driven mobile computing system using Double Deep Q-Networks for optimal resource allocation.
+
+**Tech Stack:** Reinforcement Learning, Mobile Computing
+
+[Learn More →](./mobile-edge)
+
+### 🏭 Automated Warehouse with ASP
+**Focus:** Robotic logistics optimization using Answer Set Programming
+
+Coordinated multiple robots for efficient shelf transport and order fulfillment with collision avoidance.
+
+**Tech Stack:** Answer Set Programming, Logic Programming
+
+[Learn More →](./warehouse-automation)
+
+### 📊 Data Processing Pipeline
+**Tech Stack:** Kubernetes, Kafka, Neo4j
+
+Built distributed data processing pipeline with graph algorithms (PageRank, BFS) for scalable analytics.
+
+[Learn More →](./data-pipeline)
 
 ---
 
@@ -56,6 +75,6 @@ I'm **Animesh Kumar**, a Master's student in Computer Science at Arizona State U
 ---
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a href="./projects.html" style="background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; margin-right: 1rem;">View All Projects</a>
-  <a href="./contact.html" style="background: #059669; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none;">Contact Me</a>
+  <a href="./projects" style="background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; margin-right: 1rem;">View All Projects</a>
+  <a href="./contact" style="background: #059669; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none;">Contact Me</a>
 </div>
