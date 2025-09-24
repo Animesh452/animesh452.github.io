@@ -1,12 +1,30 @@
 title: Animesh Kumar
+subtitle: MS Computer Science | AI/ML Specialist | Arizona State University
+description: Passionate about machine learning, computer vision, and distributed systems
+author: Animesh Kumar
 email: animeshk452@gmail.com
-description: MS Computer Science | AI/ML Specialist | Arizona State University
-baseurl: ""
-url: "https://animeshkumar.github.io"
 
-# Social links
-github_username: Animesh452
-linkedin_username: your-linkedin
+# Social network links
+social-network-links:
+  github: your-github-username
+  linkedin: your-linkedin-username
+  email: animeshk452@gmail.com
 
-# Theme settings
-theme: minima
+# Theme
+remote_theme: daattali/beautiful-jekyll
+
+# Navigation
+navbar-links:
+  About Me: "aboutme"
+  Projects: "projects"
+  Publications: "publications"
+  Contact: "contact"
+
+# Avatar - add your photo URL here
+avatar: "/assets/img/avatar.jpg"
+
+# Footer
+footer-links-active:
+  github: true
+  linkedin: true
+  email: true
