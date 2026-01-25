@@ -42,5 +42,5 @@ STaB-RAG is implemented as a multi-stage pipeline:
 - **Future work:** refine structural scoring, explore learned weightings (meta-learned rerankers), and integrate cross-encoder reranking at scale; also evaluate on domain-specific enterprise tables.
 
 ## Resources:  
-- Project report (PDF) — `/assets/files/CSE_576_Final_Report.pdf` (uploaded). :contentReference[oaicite:2]{index=2}
+- Project report (PDF) — [/assets/files/CSE_576_Final_Report.pdf](/assets/files/CSE_576_Final_Report.pdf)
 - Implementation: GitHub repo — [WeightedRAG](https://github.com/Abhijit85/WeightedRAG.git)
