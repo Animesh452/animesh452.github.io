@@ -40,9 +40,3 @@ Mobile devices and edge servers increasingly run computation-heavy workloads (in
 - The action space and state dimensionality must be carefully constrained to keep learning tractable.
 - Partial observability (e.g., unknown network fluctuations) may require modifications such as recurrent networks or POMDP techniques.
 - Next steps: build the simulator, implement DDQN agent, run baseline comparisons, and publish results.
-
----
-
-> **Resources (suggested):**
-> - Project report / design document — *upload to `assets/files/` and link here*  
-> - Simulation code & notebooks — *to be added if/when implemented*
