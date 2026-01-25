@@ -6,35 +6,83 @@ permalink: /projects/
 
 # My Projects
 
-## Machine Learning & AI
+## 🔬 Machine Learning, NLP & Retrieval
+
+### STaB-RAG: Weighted Multi-Signal Retrieval for Tables
+**Focus:** RAG ranking for semi-structured data  
+Designed a weighted reranking pipeline combining dense embeddings, BM25 lexical matching, and structural similarity for table-based QA. Evaluated on NQ-Tables with BEIR benchmarks.  
+[Learn More →](/projects/stab-rag/)
+
+---
 
 ### Medical Premium Prediction System
 **Tech Stack:** Python, Random Forest, XGBoost, SHAP  
-**Achievement:** 88.87% R² accuracy with comprehensive model interpretability  
-Developed an end-to-end ML pipeline for insurance premium prediction with feature engineering, model comparison, and deployment planning.  
-[Learn More](./projects/medical-premium.html)
+Built an interpretable ML pipeline for insurance premium prediction with strong generalization and SHAP-based analysis.  
+[Learn More →](/projects/medical-premium/)
 
-### Speech Recognition Model Optimization  
-**Tech Stack:** CNN, LSTM, Transformer, Attention Mechanisms  
-**Achievement:** 94.03% accuracy with Transformer architecture  
-Compared multiple architectures for speech command recognition with detailed performance analysis.  
-[Learn More](./projects/speech-recognition.html)
+---
 
-## Distributed Systems
+### Driver Monitoring System using Computer Vision
+**Tech Stack:** OpenCV, TensorFlow, VGG16  
+Peer-reviewed research (ACCAI 2024) on real-time detection of driver drowsiness and unsafe behavior using facial landmarks and CNNs.  
+[Learn More →](/projects/driver-monitoring-system/)
+
+---
+
+### Speech Recognition Model Optimization
+**Tech Stack:** CNN, LSTM, Transformer  
+Compared deep learning architectures for speech command recognition with attention mechanisms and accuracy benchmarking.  
+[Learn More →](/projects/speech-recognition/)
+
+---
+
+### Emotion Detection System
+**Tech Stack:** Deep Learning, Computer Vision  
+Explored facial emotion recognition techniques using CNN-based models and feature extraction methods.  
+[Learn More →](/projects/emotion-detection/)
+
+---
+
+### E-commerce Recommendation System
+**Tech Stack:** Machine Learning, Recommendation Systems  
+Developed a recommendation pipeline using collaborative and content-based filtering approaches.  
+[Learn More →](/projects/ecom-recommendation-system/)
+
+---
+
+## 🧠 Systems & Distributed Computing
+
+### Data Processing Pipeline (DPS)
+**Tech Stack:** Kafka, Kubernetes, Neo4j  
+Built a distributed data processing pipeline with graph-based analytics and scalable ingestion.  
+[Learn More →](/projects/data-pipeline-dps/)
+
+---
 
 ### Mobile Edge Computing with DDQN
-**Tech Stack:** Reinforcement Learning, Mobile Computing, Energy Optimization  
-**Focus:** Energy-efficient task scheduling using Double Deep Q-Networks  
-Designed a 5-year development roadmap for AI-driven mobile edge computing systems.
+**Focus:** Conceptual design for energy-efficient task scheduling  
+Proposed a reinforcement-learning-based framework for optimizing task scheduling in mobile edge environments.  
+[Learn More →](/projects/mobile-edge-ddqn/)
 
-### Data Processing Pipeline
-**Tech Stack:** Kubernetes, Kafka, Neo4j  
-**Achievement:** Scalable graph processing with real-time analytics  
-Built distributed data processing pipeline with graph algorithms (PageRank, BFS).
+---
 
-## Mobile Development
+## 📱 Applied & Mobile Systems
 
-### Tic-Tac-Toe with AI
-**Tech Stack:** Android, Minimax Algorithm, Bluetooth  
-**Features:** AI opponent, multiplayer mode, persistent game history  
-Implemented intelligent game AI with alpha-beta pruning optimization.
+### Tic-Tac-Toe with AI (Android)
+**Tech Stack:** Android, Minimax, Bluetooth  
+Implemented an AI-powered Tic-Tac-Toe game with multiplayer support and optimized decision-making.  
+[Learn More →](/projects/tic-tac-toe/)
+
+---
+
+### TrustMed-AI
+**Tech Stack:** RAG, Neo4j, Knowledge Graphs  
+Developed a healthcare-focused conversational system integrating structured medical knowledge with retrieval-augmented generation.  
+[Learn More →](/projects/trustmed-ai/)
+
+---
+
+### Scribee
+**Tech Stack:** NLP, Text Processing  
+An exploratory project focused on transcription, summarization, and text intelligence workflows.  
+[Learn More →](/projects/scribee/)
