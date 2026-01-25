@@ -41,8 +41,6 @@ STaB-RAG is implemented as a multi-stage pipeline:
 - **Signal fusion is effective:** combining diverse signals improves ranking robustness and interpretability.
 - **Future work:** refine structural scoring, explore learned weightings (meta-learned rerankers), and integrate cross-encoder reranking at scale; also evaluate on domain-specific enterprise tables.
 
----
-
-> **Resources:**  
-> - Project report (PDF) — `/assets/files/CSE_576_Final_Report.pdf` (uploaded). :contentReference[oaicite:2]{index=2}  
-> - Implementation: (optional) GitHub repo — *to be added if/when available*
+## Resources:  
+- Project report (PDF) — `/assets/files/CSE_576_Final_Report.pdf` (uploaded). :contentReference[oaicite:2]{index=2}
+- Implementation: GitHub repo — [WeightedRAG](https://github.com/Abhijit85/WeightedRAG.git)
