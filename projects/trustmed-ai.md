@@ -84,4 +84,4 @@ All answers are produced via deterministic graph queries rather than free-form g
 - Explore domain adaptation to additional therapeutic areas.
 
 ## Resources
-- Implementation repository: https://github.com/SoJ02/Fall-2025-CSE-573-TrustMed-AI.git
+- Implementation repository: [TrustMed-AI](https://github.com/SoJ02/Fall-2025-CSE-573-TrustMed-AI.git)
