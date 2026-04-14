@@ -57,6 +57,17 @@ Developed a recommendation pipeline using collaborative and content-based filter
 Built a distributed data processing pipeline with graph-based analytics and scalable ingestion.  
 [Learn More →](/projects/data-pipeline-dps/)
 
+### 🏀 Courtside - AI Sports Assistant
+**Tech Stack:** Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, RAG
+
+**Achievement:** Production-deployed AI assistant with agentic tool calling and on-demand RAG
+
+Built full-stack AI application that autonomously decides which tools to invoke based on user intent. Features live sports data across 20+ leagues, Wikipedia-based RAG for deep questions, timezone-aware email reminders, and preference-based personalization.
+
+**Live Demo:** [courtside-1uqy.onrender.com](https://courtside-1uqy.onrender.com)
+
+[Learn More →](./courtside) | [GitHub →](https://github.com/Animesh452/Courtside)
+
 ---
 
 ### Mobile Edge Computing with DDQN
