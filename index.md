@@ -23,6 +23,17 @@ I'm **Animesh Kumar**, a Master's student in Computer Science at Arizona State U
 
 ## 🚀 Featured Projects
 
+### 🏀 Courtside - AI Sports Assistant
+**Achievement:** Production AI system with agentic tool calling and RAG
+
+Full-stack AI assistant that autonomously handles sports queries, sets reminders, and provides deep insights using on-demand Wikipedia RAG. Deployed on Render with persistent storage and real-time email notifications.
+
+**Tech Stack:** Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, APScheduler
+
+[Learn More →](./courtside) | [Live Demo →](https://courtside-1uqy.onrender.com)
+
+---
+
 ### 📊 STaB-RAG: Weighted Multi-Signal Retrieval
 **Focus:** Improving table retrieval ranking for RAG systems  
 
@@ -31,17 +42,6 @@ Proposed a weighted reranking pipeline combining dense, lexical (BM25), and stru
 **Tech Stack:** Python, Information Retrieval, RAG, BM25, Dense Embeddings
 
 [Learn More →](/projects/stab-rag/)
-
----
-
-### 🏥 Medical Premium Prediction System
-**Achievement:** 88.87% R² with interpretable ML models  
-
-Built an end-to-end ML pipeline for predicting insurance premiums using demographic and medical features, with model interpretability through SHAP analysis.
-
-**Tech Stack:** Python, scikit-learn, XGBoost, SHAP
-
-[Learn More →](/projects/medical-premium/)
 
 ---
 
