@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medical Premium Prediction System | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="medical-premium-prediction-system">Medical Premium Prediction System</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Python, pandas, scikit-learn, XGBoost, SHAP, matplotlib, seaborn</p>
+
+<h2 id="overview">Overview</h2>
+<p>This project focuses on predicting medical insurance premiums using health and demographic factors.</p>
+
+<p>The system was developed as part of an academic project and emphasizes both predictive performance and model interpretability.</p>
+
+<h2 id="problem">Problem</h2>
+<p>The goal was to build an accurate and interpretable machine learning model that captures non-linear relationships between risk factors while maintaining transparency in decision-making.</p>
+
+<h2 id="approach">Approach</h2>
+<p>A structured end-to-end machine learning pipeline was implemented, covering data preprocessing, feature engineering, model training, and evaluation.</p>
+
+<ul>
+  <li><strong>Dataset:</strong> Publicly available health insurance dataset (Kaggle)</li>
+  <li><strong>Size:</strong> ~986 records with demographic and medical attributes</li>
+  <li><strong>Feature Engineering:</strong>
+    <ul>
+      <li>BMI categorization</li>
+      <li>Risk scoring based on medical history</li>
+      <li>Premium tier segmentation</li>
+    </ul>
+  </li>
+  <li><strong>Models Evaluated:</strong>
+    <ul>
+      <li>Linear Regression</li>
+      <li>Random Forest</li>
+      <li>XGBoost</li>
+    </ul>
+  </li>
+  <li><strong>Model Selection:</strong> Hyperparameter tuning using GridSearchCV</li>
+</ul>
+
+<p>Special emphasis was placed on interpretability using SHAP values to understand feature contributions to individual predictions.</p>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li><strong>Best Model:</strong> Tuned Random Forest</li>
+  <li><strong>Test R² Score:</strong> <strong>0.8887 (88.87%)</strong></li>
+  <li><strong>Training R²:</strong> 0.9193</li>
+  <li><strong>RMSE:</strong> ₹2,179</li>
+  <li><strong>Key Influential Features:</strong>
+    <ul>
+      <li>Age</li>
+      <li>Number of surgeries</li>
+      <li>Medical conditions</li>
+      <li>BMI category</li>
+    </ul>
+  </li>
+</ul>
+
+<p>SHAP analysis revealed consistent and intuitive feature importance patterns, validating both the model’s performance and its reliability for real-world interpretation.</p>
+
+<h2 id="learnings">Learnings</h2>
+<ul>
+  <li>Ensemble methods significantly outperform linear models for complex insurance risk modeling.</li>
+  <li>Interpretability tools like SHAP are critical for trust in healthcare-related ML systems.</li>
+  <li>Feature engineering had a larger impact on performance than model complexity alone.</li>
+  <li>Proper evaluation across premium tiers helped identify bias and error concentration.</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li>Project report (PDF) — <em>to be linked</em></li>
+</ul>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

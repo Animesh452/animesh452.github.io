@@ -49,4 +49,4 @@ permalink: /publications/
 
 ---
 
-*For collaboration opportunities or research discussions, feel free to [contact me](./contact).*
+*For collaboration opportunities or research discussions, feel free to [contact me](/contact/).*

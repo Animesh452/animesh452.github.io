@@ -6,6 +6,8 @@ permalink: /projects/data-pipeline-dps/
 
 # Distributed Data Processing Pipeline
 
+## Tech Stack
+
 **Tech Stack:** Kafka, Kubernetes, Neo4j, Python, Docker
 
 ## Overview
@@ -21,7 +23,9 @@ This project addresses the need for a unified pipeline that:
 - Scales horizontally with increasing data volume
 - Enables graph-based analytics over connected data
 
-## Architecture & Approach
+## Approach
+
+### Architecture & Approach
 The pipeline is composed of loosely coupled services deployed in a containerized environment.
 
 - **Data Ingestion:** Apache Kafka is used as the streaming backbone to ingest and buffer incoming data streams.

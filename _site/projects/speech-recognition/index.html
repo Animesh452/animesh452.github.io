@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speech Recognition Model Optimization | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="speech-recognition-model-optimization">Speech Recognition Model Optimization</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Python, TensorFlow, PyTorch, CNNs, LSTMs, Transformers, Attention Mechanisms</p>
+
+<h2 id="overview">Overview</h2>
+<p>This project explores and compares multiple deep learning architectures for speech command recognition. The objective was to evaluate how different sequence modeling approaches perform on short audio commands and to understand the trade-offs between accuracy, model complexity, and generalization.</p>
+
+<p>The work focuses on systematic experimentation rather than deploying a single model, with an emphasis on architectural choices and attention mechanisms.</p>
+
+<h2 id="problem">Problem</h2>
+<p>Speech recognition tasks must handle variability in speakers, accents, background noise, and recording conditions. Traditional architectures capture local or temporal features well, but may struggle to model long-range dependencies effectively.</p>
+
+<p>This project investigates how modern transformer-based architectures compare against CNNs and RNN-based models for speech command classification.</p>
+
+<h2 id="approach">Approach</h2>
+<p>The pipeline follows a consistent evaluation framework across models:</p>
+
+<ul>
+  <li><strong>Data Processing:</strong><br />
+Audio signals were converted into time–frequency representations (e.g., spectrograms / MFCCs) for model input.</li>
+  <li><strong>Model Architectures:</strong>
+    <ul>
+      <li>Convolutional Neural Networks (CNNs) for local pattern extraction</li>
+      <li>Long Short-Term Memory networks (LSTMs) for temporal modeling</li>
+      <li>Transformer-based models with attention mechanisms for global context</li>
+    </ul>
+  </li>
+  <li><strong>Training &amp; Evaluation:</strong><br />
+Models were trained under comparable settings to ensure fair comparison, with hyperparameters tuned for stability and performance.</li>
+</ul>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li><strong>Best Performance:</strong> Transformer-based model achieved <strong>94.03% accuracy</strong>.</li>
+  <li>Attention mechanisms improved robustness to temporal variations in speech.</li>
+  <li>CNNs performed efficiently with lower computational cost but slightly lower accuracy.</li>
+  <li>LSTMs captured temporal dependencies well but were more sensitive to sequence length and noise.</li>
+</ul>
+
+<h2 id="learnings">Learnings</h2>
+<ul>
+  <li>Attention-based models provide strong gains for short audio sequence modeling.</li>
+  <li>Architectural choice has a significant impact even when using the same input representations.</li>
+  <li>Transformers offer superior performance but require careful regularization and tuning.</li>
+  <li>Model comparison under consistent conditions is critical for meaningful conclusions.</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+<ul>
+  <li>Evaluate robustness under noisy and real-world audio conditions.</li>
+  <li>Explore lightweight transformer variants for edge deployment.</li>
+  <li>Extend to continuous speech recognition and multilingual datasets.</li>
+  <li>Analyze model interpretability for attention-based predictions.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li>Project report / notebooks — <em>to be linked</em></li>
+</ul>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

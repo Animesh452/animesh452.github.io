@@ -6,6 +6,8 @@ permalink: /projects/stab-rag/
 
 # STaB-RAG — Weighted Multi-Signal Retrieval for Semi-Structured Tables
 
+## Tech Stack
+
 **Tech Stack:** Python, Retrieval-Augmented Generation (RAG) pipelines, Dense embeddings, BM25, BEIR/NQ-Tables evaluation
 
 ## Overview
@@ -27,20 +29,26 @@ STaB-RAG is implemented as a multi-stage pipeline:
 - **Optional cross-encoder:** Apply an optional cross-encoder on top of the aggregated scores for further refinement.
 - **Ablations & encoder comparison:** Multiple embedding models and encoders were compared; the final pipeline selected the best-performing encoder and signal weights based on validation.
 
-## Key Results
+## Results
+
+### Key Results
 - STaB-RAG consistently improved **early-precision** metrics (notably Recall@1 and NDCG@3), which are critical for retrieval quality in RAG applications.
 - In comparisons on the NQ-Tables dataset, STaB-RAG outperformed dense-only and lexical-only baselines and achieved competitive gains over strong baselines (TAPAS, BIBERT, SPLADE, etc.). Specific metric improvements and ablation details are reported in the project report. :contentReference[oaicite:1]{index=1}
 
-## Why it matters
+## Learnings
+
+### Why it matters
 - For table-based QA, retrieving the right evidence at top ranks is more important than merely having it somewhere in the candidate pool. STaB-RAG’s multi-signal reranking directly targets that need.
 - The structural signal—explicit awareness of headers, column types, and table layout—augments semantic retrieval to avoid common failure modes of dense embeddings when table schema matters.
 - The approach is modular: each signal (dense, lexical, structural) can be replaced or extended, making STaB-RAG adaptable to new encoders and domain signals.
 
-## Lessons & Next Steps
+### Lessons & Next Steps
 - **Chunking matters:** preserving table structure (pure_table) gave the most stable retrieval results.
 - **Signal fusion is effective:** combining diverse signals improves ranking robustness and interpretability.
+
+## Limitations & Future Work
 - **Future work:** refine structural scoring, explore learned weightings (meta-learned rerankers), and integrate cross-encoder reranking at scale; also evaluate on domain-specific enterprise tables.
 
-## Resources:  
+## Resources
 - Project report (PDF) — [Final_Report.pdf](/assets/files/CSE_576_Final_Report.pdf)
 - Implementation: GitHub repo — [WeightedRAG](https://github.com/Abhijit85/WeightedRAG.git)

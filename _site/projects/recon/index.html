@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recon - Automated Job Search Pipeline | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="recon---automated-job-search-pipeline">Recon - Automated Job Search Pipeline</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Python, LiteLLM, Ollama (Qwen 2.5), SQLite, Google Sheets API, Apify, LaTeX, Task Scheduler</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Recon is an automated job search pipeline designed to make opportunity discovery more structured, scalable, and selective. Instead of manually scanning postings one by one, the system collects candidate roles, screens them with an LLM-based evaluator, and surfaces the strongest matches for human review.</p>
+
+<p>The goal is not to fully automate applications. Recon is built around a human-in-the-loop workflow where automation handles repetitive filtering, while final judgment, customization, and outreach stay with the user.The system goes beyond filtering by generating tailored resumes and cold outreach drafts for approved roles, turning job search into a semi-automated pipeline.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>Job searching is noisy and repetitive. Relevant roles are spread across many sources, job descriptions vary in quality, and manual screening makes it easy to miss promising opportunities or spend time on poor matches.</p>
+
+<p>Recon addresses three core challenges:</p>
+<ul>
+  <li>Finding relevant postings consistently across multiple sources.</li>
+  <li>Comparing job requirements against a candidate profile in a repeatable way.</li>
+  <li>Keeping the workflow accountable by requiring human review before action.</li>
+</ul>
+
+<h2 id="approach">Approach</h2>
+
+<p>The pipeline runs as a twice-daily automated workflow: morning ingestion and screening, followed by an afternoon drafting phase based on user-approved roles.</p>
+
+<h3 id="system-architecture">System Architecture</h3>
+
+<p>Recon is structured as a modular pipeline:</p>
+
+<ul>
+  <li><strong>Ingestion:</strong> Collects job postings from configured sources and normalizes them into a consistent format.</li>
+  <li><strong>Parsing &amp; enrichment:</strong> Extracts key fields such as role, company, location, requirements, skills, and application metadata.</li>
+  <li><strong>LLM-based screening:</strong> Scores each posting against the candidate profile using criteria such as skill fit, role alignment, seniority, location, and relevance.</li>
+  <li><strong>Ranking &amp; triage:</strong> Groups roles into high-priority, review, and low-fit queues so the user can focus attention where it matters.</li>
+  <li><strong>Human review:</strong> Keeps the final decision in the loop before applications, follow-ups, or saved leads are generated.</li>
+</ul>
+
+<h3 id="design-principles">Design Principles</h3>
+
+<p>The system prioritizes transparency over blind automation. Screening outputs are designed to include reasoning, fit signals, and potential concerns rather than a single opaque score.</p>
+
+<p>It also separates data collection, evaluation, and review so each part can be improved independently. This makes it easier to add new job sources, adjust screening prompts, or refine ranking criteria without rewriting the whole workflow.</p>
+
+<h2 id="results--impact">Results / Impact</h2>
+
+<ul>
+  <li>Automated multi-source job discovery and screening into a daily pipeline.</li>
+  <li>Reduced manual job filtering from hours to a structured review workflow.</li>
+  <li>Enabled consistent, repeatable evaluation of job fit using LLM-based reasoning.</li>
+  <li>Generated tailored resumes and outreach drafts on demand for approved roles.</li>
+</ul>
+
+<h2 id="learnings">Learnings</h2>
+
+<p>Recon reinforced that LLMs are most useful in workflow automation when they assist judgment instead of replacing it. The strongest design pattern was using the model for structured interpretation, ranking, and explanation, then letting the user make the final decision.</p>
+
+<p>The project also highlighted the importance of system architecture in applied AI work. Clean boundaries between ingestion, screening, storage, and review make the pipeline easier to debug and extend. It also highlighted how local LLMs can be effectively integrated into production-style workflows without relying on cloud inference, reducing cost while maintaining flexibility.</p>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+
+<ul>
+  <li>Add stronger deduplication across job boards and company career pages.</li>
+  <li>Track application status, follow-ups, and outcomes over time.</li>
+  <li>Improve evaluation with feedback loops from accepted, rejected, or ignored roles.</li>
+  <li>Add guardrails for stale postings, incomplete job descriptions, and inflated requirements.</li>
+  <li>Expand reporting so the user can see which skills, titles, and companies appear most often.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li>Project repository: <em>to be linked</em></li>
+</ul>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

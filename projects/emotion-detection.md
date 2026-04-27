@@ -6,6 +6,8 @@ permalink: /projects/emotion-detection/
 
 # Emotion Detection using Computer Vision
 
+## Tech Stack
+
 **Tech Stack:** Python, OpenCV, Deep Learning, CNNs
 
 ## Overview

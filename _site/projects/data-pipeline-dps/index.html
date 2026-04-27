@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Distributed Data Processing Pipeline | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="distributed-data-processing-pipeline">Distributed Data Processing Pipeline</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Kafka, Kubernetes, Neo4j, Python, Docker</p>
+
+<h2 id="overview">Overview</h2>
+<p>This project focuses on designing and implementing a distributed data processing pipeline for scalable ingestion, transformation, and analysis of structured and semi-structured data. The system emphasizes reliability, modularity, and scalability, with a particular focus on graph-based analytics for downstream insights.</p>
+
+<p>The pipeline was developed as part of an academic project to explore real-world data engineering challenges such as streaming ingestion, orchestration, and graph computation.</p>
+
+<h2 id="problem">Problem</h2>
+<p>Modern data systems must handle continuous data ingestion while supporting complex analytics and low-latency queries. Traditional batch pipelines struggle with scalability and responsiveness, while ad-hoc streaming solutions often lack structure and fault tolerance.</p>
+
+<p>This project addresses the need for a unified pipeline that:</p>
+<ul>
+  <li>Supports real-time and near–real-time ingestion</li>
+  <li>Scales horizontally with increasing data volume</li>
+  <li>Enables graph-based analytics over connected data</li>
+</ul>
+
+<h2 id="approach">Approach</h2>
+
+<h3 id="architecture--approach">Architecture &amp; Approach</h3>
+<p>The pipeline is composed of loosely coupled services deployed in a containerized environment.</p>
+
+<ul>
+  <li><strong>Data Ingestion:</strong> Apache Kafka is used as the streaming backbone to ingest and buffer incoming data streams.</li>
+  <li><strong>Processing Layer:</strong> Consumer services perform data cleaning, transformation, and enrichment before forwarding results downstream.</li>
+  <li><strong>Graph Storage &amp; Analytics:</strong> Processed data is stored in Neo4j, enabling graph algorithms such as PageRank and BFS for relationship-driven insights.</li>
+  <li><strong>Orchestration &amp; Deployment:</strong> All components are containerized and deployed on Kubernetes, allowing independent scaling and fault isolation.</li>
+  <li><strong>Observability &amp; Reliability:</strong> The design accounts for message replay, consumer offsets, and service restarts to ensure data consistency.</li>
+</ul>
+
+<p>The architecture prioritizes separation of concerns so that ingestion, processing, and analytics can evolve independently.</p>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li>Successfully ingested and processed streaming data at scale using Kafka.</li>
+  <li>Enabled efficient graph queries and analytics using Neo4j.</li>
+  <li>Demonstrated horizontal scalability through container orchestration.</li>
+  <li>Validated fault tolerance via consumer restarts and message replay.</li>
+</ul>
+
+<h2 id="learnings">Learnings</h2>
+<ul>
+  <li>Decoupling ingestion from processing greatly improves system robustness.</li>
+  <li>Graph databases are well-suited for relationship-heavy analytics that are cumbersome in relational models.</li>
+  <li>Kubernetes simplifies deployment but introduces its own operational complexity.</li>
+  <li>Designing for failure (restarts, replay, partial outages) is essential in distributed systems.</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+<ul>
+  <li>Add monitoring and alerting for end-to-end pipeline visibility.</li>
+  <li>Introduce schema validation and versioning for evolving data formats.</li>
+  <li>Explore stream processing frameworks (e.g., Kafka Streams or Flink) for more complex transformations.</li>
+  <li>Benchmark performance under higher data volumes and varied workloads.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li>Project report (PDF): <em>to be linked</em></li>
+</ul>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

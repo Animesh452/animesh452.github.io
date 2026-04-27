@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Driver Monitoring System using Computer Vision | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="driver-monitoring-system-using-computer-vision">Driver Monitoring System using Computer Vision</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Python, OpenCV, TensorFlow, Keras, VGG16, Facial Landmark Detection</p>
+
+<h2 id="overview">Overview</h2>
+<p>This project presents a real-time driver monitoring system designed to detect signs of driver fatigue and unsafe behavior using computer vision and deep learning. This work culminated in a peer-reviewed publication at ACCAI 2024 and was evaluated under real-world constraints for robustness and accuracy.</p>
+
+<p>This work culminated in a peer-reviewed research publication and was evaluated under real-world constraints for robustness and accuracy.</p>
+
+<h2 id="problem">Problem</h2>
+<p>The system aims to enhance road safety by continuously monitoring driver attentiveness and identifying risk patterns such as eye closure, yawning, and smoking.</p>
+
+<h2 id="approach">Approach</h2>
+<p>The system processes live video streams to detect facial regions and extract meaningful behavioral cues.</p>
+
+<ul>
+  <li><strong>Face &amp; Landmark Detection:</strong> Facial landmarks were extracted to localize eyes and mouth regions in real time.</li>
+  <li><strong>Model Architecture:</strong> A VGG16-based convolutional neural network was used for classification tasks.</li>
+  <li><strong>Behavioral Classes:</strong>
+    <ul>
+      <li>Eye closure (drowsiness detection)</li>
+      <li>Yawning</li>
+      <li>Smoking</li>
+    </ul>
+  </li>
+  <li><strong>Pipeline:</strong>
+    <ul>
+      <li>Video frame preprocessing</li>
+      <li>Region-of-interest extraction</li>
+      <li>CNN-based classification</li>
+      <li>Temporal smoothing for stability</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The design prioritized low latency and real-time performance to support continuous monitoring scenarios.</p>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li><strong>Closed-eye detection accuracy:</strong> <strong>92%</strong></li>
+  <li><strong>Yawning detection accuracy:</strong> <strong>87%</strong></li>
+  <li><strong>Smoking detection accuracy:</strong> <strong>89%</strong></li>
+</ul>
+
+<p>The system demonstrated reliable performance across varying lighting conditions and driver appearances, validating its applicability for real-world deployment.</p>
+
+<h2 id="learnings">Learnings</h2>
+<ul>
+  <li>Combining facial landmarks with CNNs significantly improves robustness over end-to-end image classification.</li>
+  <li>Temporal consistency is essential for reducing false positives in behavioral detection.</li>
+  <li>Model optimization is critical for real-time inference in safety-critical systems.</li>
+  <li>Dataset diversity strongly impacts generalization in driver monitoring applications.</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+
+<h2 id="resources">Resources</h2>
+
+<h3 id="publication">Publication</h3>
+<p><strong>Real-time Driver Monitoring using Facial Landmarks and Deep Learning</strong><br />
+<em>International Conference on Advances in Computing, Communication and Applied Informatics (ACCAI 2024)</em></p>
+
+<p>DOI: https://doi.org/10.1109/ACCAI61061.2024.10602453<br />
+IEEE Xplore: https://ieeexplore.ieee.org/abstract/document/10602453</p>
+
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>
