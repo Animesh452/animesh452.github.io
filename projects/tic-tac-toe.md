@@ -1,15 +1,19 @@
 ---
 layout: page
 title: [Project Title]
-permalink: /projects/[slug]/
+permalink: /projects/tic-tac-toe/
 ---
 
 # [Project Title]
+
+## Tech Stack
 
 **Tech Stack:** [List your tools/libraries/languages]
 
 ## Overview
 A short paragraph describing what the project is about — the main problem, what you built, and why it matters.
+
+## Problem
 
 ## Approach
 Briefly summarize how you approached it: your dataset, model, architecture, or key methods.
@@ -20,9 +24,13 @@ Summarize your outcomes — accuracy, R², speed improvements, or key qualitativ
 ## Learnings
 What you gained or learned from the project, challenges you overcame, or what you’d improve next time.
 
+## Limitations & Future Work
+
 ---
 
+## Resources
+
 > **Resources:**  
-> - [PDF Report](/assets/files/[filename].pdf)  
+> - [PDF Report](/projects/tic-tac-toe/)
 > - [GitHub Repository](https://github.com/[repo-link]) *(if applicable)*
 

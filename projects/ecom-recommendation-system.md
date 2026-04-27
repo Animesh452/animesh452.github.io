@@ -6,6 +6,8 @@ permalink: /projects/ecom-recommendation-system/
 
 # E-commerce Recommendation System
 
+## Tech Stack
+
 **Tech Stack:** Python, Machine Learning, Collaborative Filtering, Content-Based Filtering
 
 ## Overview

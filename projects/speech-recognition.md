@@ -6,6 +6,8 @@ permalink: /projects/speech-recognition/
 
 # Speech Recognition Model Optimization
 
+## Tech Stack
+
 **Tech Stack:** Python, TensorFlow, PyTorch, CNNs, LSTMs, Transformers, Attention Mechanisms
 
 ## Overview

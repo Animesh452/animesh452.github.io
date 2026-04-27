@@ -6,12 +6,17 @@ permalink: /projects/medical-premium/
 
 # Medical Premium Prediction System
 
+## Tech Stack
+
 **Tech Stack:** Python, pandas, scikit-learn, XGBoost, SHAP, matplotlib, seaborn
 
 ## Overview
-This project focuses on predicting medical insurance premiums using health and demographic factors. The goal was to build an accurate and interpretable machine learning model that captures non-linear relationships between risk factors while maintaining transparency in decision-making.
+This project focuses on predicting medical insurance premiums using health and demographic factors.
 
 The system was developed as part of an academic project and emphasizes both predictive performance and model interpretability.
+
+## Problem
+The goal was to build an accurate and interpretable machine learning model that captures non-linear relationships between risk factors while maintaining transparency in decision-making.
 
 ## Approach
 A structured end-to-end machine learning pipeline was implemented, covering data preprocessing, feature engineering, model training, and evaluation.
@@ -48,6 +53,8 @@ SHAP analysis revealed consistent and intuitive feature importance patterns, val
 - Interpretability tools like SHAP are critical for trust in healthcare-related ML systems.
 - Feature engineering had a larger impact on performance than model complexity alone.
 - Proper evaluation across premium tiers helped identify bias and error concentration.
+
+## Limitations & Future Work
 
 ## Resources
 - Project report (PDF) — *to be linked*

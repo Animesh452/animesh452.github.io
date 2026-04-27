@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Courtside - AI Sports Assistant | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="courtside---ai-sports-assistant">Courtside - AI Sports Assistant</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Tech Stack:</strong> Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, APScheduler, Resend API, Wikipedia API, ESPN API, HTML/JS</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Technology</th>
+      <th>Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LLM</td>
+      <td>Gemini 2.5 Flash</td>
+      <td>Free tier, strong tool calling</td>
+    </tr>
+    <tr>
+      <td>Backend</td>
+      <td>FastAPI (Python)</td>
+      <td>Async-ready, lightweight</td>
+    </tr>
+    <tr>
+      <td>Frontend</td>
+      <td>Single HTML file</td>
+      <td>No build tools, focus on backend</td>
+    </tr>
+    <tr>
+      <td>Database</td>
+      <td>PostgreSQL / SQLite</td>
+      <td>Auto-detected via DATABASE_URL</td>
+    </tr>
+    <tr>
+      <td>Scheduler</td>
+      <td>APScheduler</td>
+      <td>Python-native background jobs</td>
+    </tr>
+    <tr>
+      <td>Notifications</td>
+      <td>Resend API</td>
+      <td>HTTPS-based email (SMTP blocked on Render)</td>
+    </tr>
+    <tr>
+      <td>RAG</td>
+      <td>Wikipedia + keyword scoring</td>
+      <td>No embedding model, zero cold-start overhead</td>
+    </tr>
+    <tr>
+      <td>Sports Data</td>
+      <td>ESPN Unofficial API</td>
+      <td>Free, no auth, all major sports</td>
+    </tr>
+    <tr>
+      <td>Deployment</td>
+      <td>Render (free tier)</td>
+      <td>Auto-deploy from GitHub</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="overview">Overview</h2>
+<p>A personal AI sports assistant with agentic tool calling, on-demand RAG, and automated event reminders. Courtside replaces manual googling of sports schedules, missing match results, and researching new sports with a single conversational interface.</p>
+
+<h2 id="problem">Problem</h2>
+
+<h3 id="problem-statement">Problem Statement</h3>
+<p>Sports fans face constant challenges: manually searching for schedules across multiple leagues, missing important matches, lacking context about players and teams, and managing reminders for upcoming events across different time zones.</p>
+
+<h2 id="approach">Approach</h2>
+
+<h3 id="technical-implementation">Technical Implementation</h3>
+
+<h4 id="architecture">Architecture</h4>
+<p>Browser (HTML/JS) — sends user timezone automatically
+↓
+FastAPI Backend → Agentic Tool Loop (Gemini 2.5 Flash)
+├── Sports Data Tool (ESPN API → schedules, scores, cricket)
+├── Deep Search Tool (Wikipedia → chunk → keyword score)
+├── Reminder Tool (PostgreSQL → APScheduler → Resend email)
+├── Preference Tool (PostgreSQL → personalization)
+└── Direct Chat (LLM answers from knowledge)
+↓
+APScheduler (background) → checks every 60s → sends emails</p>
+
+<h4 id="core-features">Core Features</h4>
+
+<p><strong>1. Agentic Tool Calling</strong></p>
+<ul>
+  <li>LLM autonomously decides which tool to invoke based on user intent</li>
+  <li>No hardcoded if/else routing - pure intent understanding</li>
+  <li>Built manually (no LangChain) to demonstrate understanding of the pattern</li>
+</ul>
+
+<p><strong>2. Live Sports Data</strong></p>
+<ul>
+  <li>Real-time schedules and scores via ESPN unofficial API</li>
+  <li>Supports 20+ sports: UFC, MMA, F1, NFL, NBA, MLB, NHL, Tennis, Soccer leagues, Cricket</li>
+  <li>Automatic timezone conversion for global events</li>
+</ul>
+
+<p><strong>3. On-Demand RAG (Retrieval-Augmented Generation)</strong></p>
+<ul>
+  <li>Deep questions trigger Wikipedia content fetching</li>
+  <li>Chunks passages, scores by keyword relevance</li>
+  <li>Uses best chunks as LLM context, then discards</li>
+  <li>Zero maintenance, no embedding model required</li>
+</ul>
+
+<p><strong>4. Event Reminders</strong></p>
+<ul>
+  <li>Natural language reminder creation: “remind me about UFC 327 on April 12 at 5pm”</li>
+  <li>Timezone-aware storage in PostgreSQL</li>
+  <li>APScheduler checks every 60 seconds</li>
+  <li>Email delivery via Resend API</li>
+</ul>
+
+<p><strong>5. Preference Store</strong></p>
+<ul>
+  <li>PostgreSQL-backed personalization</li>
+  <li>Remembers followed sports and teams</li>
+  <li>Contextual responses: “any upcoming events?” returns UFC schedule if user follows UFC</li>
+</ul>
+
+<h3 id="key-technical-decisions">Key Technical Decisions</h3>
+
+<h4 id="why-agentic-tool-calling-over-ifelse-routing">Why Agentic Tool Calling Over If/Else Routing?</h4>
+<p>Hardcoded routing like <code class="language-plaintext highlighter-rouge">if "schedule" in message</code> breaks with language variations. The agentic approach lets the LLM understand intent naturally - define tools with JSON schemas and the model picks which to call. This is how production AI systems work.</p>
+
+<h4 id="why-build-tool-calling-loop-manually">Why Build Tool-Calling Loop Manually?</h4>
+<p>LangChain abstracts the loop, making it impossible to explain internals. Building manually (~50 lines) means every step is visible and explainable. Signals understanding over framework dependency.</p>
+
+<h4 id="why-on-demand-rag-instead-of-vector-database">Why On-Demand RAG Instead of Vector Database?</h4>
+<p>Pre-scraping all sports data isn’t feasible - data is enormous and constantly stale. On-demand RAG: fetch at query time, chunk, score, retrieve, answer, discard. No maintenance burden.</p>
+
+<h4 id="why-keyword-scoring-over-embeddings">Why Keyword Scoring Over Embeddings?</h4>
+<p>Original implementation used ChromaDB with all-MiniLM-L6-v2 embedding model (~80MB). On Render’s ephemeral filesystem, this re-downloaded on every cold start, adding 30+ seconds. Keyword scoring achieves comparable retrieval with zero model dependencies.</p>
+
+<h3 id="implementation-highlights">Implementation Highlights</h3>
+
+<p><strong>Timezone Handling:</strong></p>
+<ul>
+  <li>Browser automatically detects and sends user timezone</li>
+  <li>All reminders store creation timezone</li>
+  <li>Email notifications formatted in user’s timezone</li>
+</ul>
+
+<p><strong>Error Handling:</strong></p>
+<ul>
+  <li>Graceful degradation when APIs are unavailable</li>
+  <li>Connection retry logic for Bluetooth (in Tic-Tac-Toe integration)</li>
+  <li>Database auto-detection between PostgreSQL and SQLite</li>
+</ul>
+
+<p><strong>Real-time Synchronization:</strong></p>
+<ul>
+  <li>APScheduler background jobs for reminder checks</li>
+  <li>Email delivery via Resend API (SMTP ports blocked on Render)</li>
+  <li>Persistent storage survives server restarts</li>
+</ul>
+
+<h2 id="results">Results</h2>
+
+<h3 id="results--impact">Results &amp; Impact</h3>
+<ul>
+  <li><strong>Live deployment</strong> on Render free tier with auto-deploy</li>
+  <li><strong>Zero cold-start model downloads</strong> after optimization</li>
+  <li><strong>Instant responses</strong> for sports queries across 20+ leagues</li>
+  <li><strong>Reliable reminders</strong> with timezone-aware email delivery</li>
+  <li><strong>Personalized experience</strong> through preference learning</li>
+</ul>
+
+<p><strong>Deployment:</strong> Render (free tier) with auto-deploy from GitHub</p>
+
+<p><strong>Key Skills Demonstrated:</strong> Agentic AI, RAG Architecture, Tool Calling, Real-time Systems, API Integration, Database Design, Production Deployment</p>
+
+<h2 id="learnings">Learnings</h2>
+
+<h3 id="challenges-overcome">Challenges Overcome</h3>
+
+<p><strong>1. Deployment Constraints:</strong></p>
+<ul>
+  <li>Ephemeral filesystem wiped database → switched to PostgreSQL</li>
+  <li>SMTP ports blocked → implemented Resend API</li>
+  <li>80MB embedding model cold starts → moved to keyword scoring</li>
+</ul>
+
+<p><strong>2. Production vs Development Gap:</strong></p>
+<ul>
+  <li>Local SQLite → Production PostgreSQL auto-detection</li>
+  <li>Manual timezone handling → browser-based detection</li>
+  <li>Cold-start optimization → eliminated heavy dependencies</li>
+</ul>
+
+<p><strong>3. Data Synchronization:</strong></p>
+<ul>
+  <li>Real-time reminder checks without blocking requests</li>
+  <li>Graceful handling of API failures</li>
+  <li>Consistent state across server restarts</li>
+</ul>
+
+<h3 id="what-i-learned">What I Learned</h3>
+<ul>
+  <li>Agentic tool calling separates chatbots from useful AI systems</li>
+  <li>Never let LLM do math - compute in Python, give formatted text</li>
+  <li>On-demand RAG is more practical than vector databases for most use cases</li>
+  <li>Every production constraint led to better architecture</li>
+  <li>Deployed version is architecturally stronger than original design</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+
+<h3 id="future-improvements">Future Improvements</h3>
+<ul>
+  <li>User authentication for multi-user support</li>
+  <li>Chat history persistence (currently resets on restart)</li>
+  <li>Soccer/Tennis fixture APIs with actual match details</li>
+  <li>Paid sports APIs for production reliability</li>
+  <li>OAuth and per-user database isolation</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<p><strong>Live Demo:</strong> <a href="https://courtside-1uqy.onrender.com">courtside-1uqy.onrender.com</a></p>
+
+<p><strong>GitHub:</strong> <a href="https://github.com/Animesh452/Courtside">github.com/Animesh452/Courtside</a></p>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mobile Edge Computing — DDQN Task Scheduling | Animesh Kumar</title>
+    <meta name="description" content="Passionate about machine learning, computer vision, and distributed systems">
+    <link rel="stylesheet" href="/assets/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-container site-header__inner">
+    <a class="site-header__brand" href="/">Animesh Kumar</a>
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main" id="main-content">
+      <div class="site-container">
+        <h1 id="mobile-edge-computing--ddqn-task-scheduling">Mobile Edge Computing — DDQN Task Scheduling</h1>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<p><strong>Type:</strong> Research proposal / conceptual project<br />
+<strong>Tech Stack (proposed):</strong> Python, TensorFlow/PyTorch, OpenAI Gym (or custom simulator), ns-3 (or other network simulator), Docker/Kubernetes for deployment experiments</p>
+
+<h2 id="overview">Overview</h2>
+<p>This project investigates energy-efficient task scheduling for mobile edge computing using reinforcement learning. The goal is to design an agent that learns to allocate computation tasks across mobile/edge/cloud resources to minimize energy consumption while meeting latency and QoS constraints.</p>
+
+<p>Although this work began as a conceptual/idea paper and design study rather than a fully deployed system, it captures a concrete research direction and experimental plan suitable for later implementation and evaluation.</p>
+
+<h2 id="problem">Problem</h2>
+
+<h3 id="motivation">Motivation</h3>
+<p>Mobile devices and edge servers increasingly run computation-heavy workloads (inference, preprocessing, analytics). Static scheduling policies either overprovision (waste energy) or underperform (miss latency targets). A data-driven RL approach can adapt to changing load, network conditions, and device states to make smarter scheduling decisions.</p>
+
+<h2 id="approach">Approach</h2>
+
+<h3 id="proposed-approach">Proposed Approach</h3>
+<ul>
+  <li><strong>Problem formulation:</strong> Model scheduling as a Markov Decision Process where the agent observes device/edge resource states (CPU, memory, battery, network RTT) and incoming task characteristics (size, deadline, priority) and selects placement and resource allocations.</li>
+  <li><strong>Agent &amp; Algorithm:</strong> Double Deep Q-Network (DDQN) with a compact state representation and an action space encoding offload/execute decisions plus resource allocation knobs.</li>
+  <li><strong>Reward design:</strong> Multi-objective reward combining negative energy consumption, penalty for missed deadlines, and small regularization for switching costs.</li>
+  <li><strong>Simulation &amp; Environment:</strong> Build a custom environment (or extend an existing simulator) that simulates heterogeneous mobile devices, network variability, and an edge server cluster. Use this to train and evaluate the DDQN agent.</li>
+  <li><strong>Baseline comparisons:</strong> Rule-based heuristics (round-robin, minimum-latency-first), myopic greedy strategies, and a standard DQN baseline.</li>
+  <li><strong>Training stability:</strong> Use prioritized experience replay, reward clipping, and target network updates to stabilize training. Tune hyperparameters via grid search or Bayesian optimization.</li>
+</ul>
+
+<h2 id="results">Results</h2>
+
+<h3 id="evaluation-plan">Evaluation Plan</h3>
+<ul>
+  <li><strong>Metrics:</strong> Average energy per task, task success rate (deadline met), average latency, and overall system throughput.</li>
+  <li><strong>Scenarios:</strong> Vary workloads (bursty vs steady), device battery levels, and network conditions (LTE/5G/unreliable).</li>
+  <li><strong>Ablations:</strong> Remove reward components or simplify state representation to measure their impact; compare DDQN vs DQN vs heuristics.</li>
+  <li><strong>Deployment experiment (optional):</strong> Small-scale testbed using Docker containers on heterogeneous VMs to measure real network/CPU effects.</li>
+</ul>
+
+<h2 id="learnings">Learnings</h2>
+
+<h3 id="expected-impact--learnings">Expected Impact &amp; Learnings</h3>
+<ul>
+  <li>Showcases how reinforcement learning can produce robust and adaptive scheduling policies for energy-critical edge settings.</li>
+  <li>Balances theoretical RL design with practical systems constraints (latency, limited observation, partial observability).</li>
+  <li>Provides a reproducible experimental framework that can be extended into a full implementation and publishable study.</li>
+</ul>
+
+<h2 id="limitations--future-work">Limitations &amp; Future Work</h2>
+
+<h3 id="limitations--next-steps">Limitations &amp; Next Steps</h3>
+<ul>
+  <li>The action space and state dimensionality must be carefully constrained to keep learning tractable.</li>
+  <li>Partial observability (e.g., unknown network fluctuations) may require modifications such as recurrent networks or POMDP techniques.</li>
+  <li>Next steps: build the simulator, implement DDQN agent, run baseline comparisons, and publish results.</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+
+      </div>
+    </main>
+    <footer class="site-footer">
+  <div class="site-container site-footer__inner">
+    <p>Animesh Kumar</p>
+    <nav class="site-footer__links" aria-label="Footer links">
+      <a href="https://github.com/Animesh452">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

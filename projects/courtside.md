@@ -6,18 +6,35 @@ permalink: /courtside/
 
 # Courtside - AI Sports Assistant
 
-**Live Demo:** [courtside-1uqy.onrender.com](https://courtside-1uqy.onrender.com)  
-**GitHub:** [github.com/Animesh452/Courtside](https://github.com/Animesh452/Courtside)
+## Tech Stack
+
+**Tech Stack:** Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, APScheduler, Resend API, Wikipedia API, ESPN API, HTML/JS
+
+| Layer | Technology | Why |
+|-------|-----------|-----|
+| LLM | Gemini 2.5 Flash | Free tier, strong tool calling |
+| Backend | FastAPI (Python) | Async-ready, lightweight |
+| Frontend | Single HTML file | No build tools, focus on backend |
+| Database | PostgreSQL / SQLite | Auto-detected via DATABASE_URL |
+| Scheduler | APScheduler | Python-native background jobs |
+| Notifications | Resend API | HTTPS-based email (SMTP blocked on Render) |
+| RAG | Wikipedia + keyword scoring | No embedding model, zero cold-start overhead |
+| Sports Data | ESPN Unofficial API | Free, no auth, all major sports |
+| Deployment | Render (free tier) | Auto-deploy from GitHub |
 
 ## Overview
 A personal AI sports assistant with agentic tool calling, on-demand RAG, and automated event reminders. Courtside replaces manual googling of sports schedules, missing match results, and researching new sports with a single conversational interface.
 
-## Problem Statement
+## Problem
+
+### Problem Statement
 Sports fans face constant challenges: manually searching for schedules across multiple leagues, missing important matches, lacking context about players and teams, and managing reminders for upcoming events across different time zones.
 
-## Technical Implementation
+## Approach
 
-### Architecture
+### Technical Implementation
+
+#### Architecture
 Browser (HTML/JS) — sends user timezone automatically
 ↓
 FastAPI Backend → Agentic Tool Loop (Gemini 2.5 Flash)
@@ -29,7 +46,7 @@ FastAPI Backend → Agentic Tool Loop (Gemini 2.5 Flash)
 ↓
 APScheduler (background) → checks every 60s → sends emails
 
-### Core Features
+#### Core Features
 
 **1. Agentic Tool Calling**
 - LLM autonomously decides which tool to invoke based on user intent
@@ -58,35 +75,21 @@ APScheduler (background) → checks every 60s → sends emails
 - Remembers followed sports and teams
 - Contextual responses: "any upcoming events?" returns UFC schedule if user follows UFC
 
-## Tech Stack
+### Key Technical Decisions
 
-| Layer | Technology | Why |
-|-------|-----------|-----|
-| LLM | Gemini 2.5 Flash | Free tier, strong tool calling |
-| Backend | FastAPI (Python) | Async-ready, lightweight |
-| Frontend | Single HTML file | No build tools, focus on backend |
-| Database | PostgreSQL / SQLite | Auto-detected via DATABASE_URL |
-| Scheduler | APScheduler | Python-native background jobs |
-| Notifications | Resend API | HTTPS-based email (SMTP blocked on Render) |
-| RAG | Wikipedia + keyword scoring | No embedding model, zero cold-start overhead |
-| Sports Data | ESPN Unofficial API | Free, no auth, all major sports |
-| Deployment | Render (free tier) | Auto-deploy from GitHub |
-
-## Key Technical Decisions
-
-### Why Agentic Tool Calling Over If/Else Routing?
+#### Why Agentic Tool Calling Over If/Else Routing?
 Hardcoded routing like `if "schedule" in message` breaks with language variations. The agentic approach lets the LLM understand intent naturally - define tools with JSON schemas and the model picks which to call. This is how production AI systems work.
 
-### Why Build Tool-Calling Loop Manually?
+#### Why Build Tool-Calling Loop Manually?
 LangChain abstracts the loop, making it impossible to explain internals. Building manually (~50 lines) means every step is visible and explainable. Signals understanding over framework dependency.
 
-### Why On-Demand RAG Instead of Vector Database?
+#### Why On-Demand RAG Instead of Vector Database?
 Pre-scraping all sports data isn't feasible - data is enormous and constantly stale. On-demand RAG: fetch at query time, chunk, score, retrieve, answer, discard. No maintenance burden.
 
-### Why Keyword Scoring Over Embeddings?
+#### Why Keyword Scoring Over Embeddings?
 Original implementation used ChromaDB with all-MiniLM-L6-v2 embedding model (~80MB). On Render's ephemeral filesystem, this re-downloaded on every cold start, adding 30+ seconds. Keyword scoring achieves comparable retrieval with zero model dependencies.
 
-## Implementation Highlights
+### Implementation Highlights
 
 **Timezone Handling:**
 - Browser automatically detects and sends user timezone
@@ -103,14 +106,22 @@ Original implementation used ChromaDB with all-MiniLM-L6-v2 embedding model (~80
 - Email delivery via Resend API (SMTP ports blocked on Render)
 - Persistent storage survives server restarts
 
-## Results & Impact
+## Results
+
+### Results & Impact
 - **Live deployment** on Render free tier with auto-deploy
 - **Zero cold-start model downloads** after optimization
 - **Instant responses** for sports queries across 20+ leagues
 - **Reliable reminders** with timezone-aware email delivery
 - **Personalized experience** through preference learning
 
-## Challenges Overcome
+**Deployment:** Render (free tier) with auto-deploy from GitHub
+
+**Key Skills Demonstrated:** Agentic AI, RAG Architecture, Tool Calling, Real-time Systems, API Integration, Database Design, Production Deployment
+
+## Learnings
+
+### Challenges Overcome
 
 **1. Deployment Constraints:**
 - Ephemeral filesystem wiped database → switched to PostgreSQL
@@ -127,24 +138,24 @@ Original implementation used ChromaDB with all-MiniLM-L6-v2 embedding model (~80
 - Graceful handling of API failures
 - Consistent state across server restarts
 
-## What I Learned
+### What I Learned
 - Agentic tool calling separates chatbots from useful AI systems
 - Never let LLM do math - compute in Python, give formatted text
 - On-demand RAG is more practical than vector databases for most use cases
 - Every production constraint led to better architecture
 - Deployed version is architecturally stronger than original design
 
-## Future Improvements
+## Limitations & Future Work
+
+### Future Improvements
 - User authentication for multi-user support
 - Chat history persistence (currently resets on restart)
 - Soccer/Tennis fixture APIs with actual match details
 - Paid sports APIs for production reliability
 - OAuth and per-user database isolation
 
----
+## Resources
 
-**Tech Stack:** Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, APScheduler, Resend API, Wikipedia API, ESPN API, HTML/JS
+**Live Demo:** [courtside-1uqy.onrender.com](https://courtside-1uqy.onrender.com)
 
-**Deployment:** Render (free tier) with auto-deploy from GitHub
-
-**Key Skills Demonstrated:** Agentic AI, RAG Architecture, Tool Calling, Real-time Systems, API Integration, Database Design, Production Deployment
+**GitHub:** [github.com/Animesh452/Courtside](https://github.com/Animesh452/Courtside)

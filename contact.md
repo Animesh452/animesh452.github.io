@@ -18,7 +18,7 @@ I'm always interested in discussing new opportunities, collaborations, and innov
 
 ### 🌐 Connect Online
 
-**LinkedIn:** [your-linkedin-profile](https://linkedin.com/in/your-profile)  
+**LinkedIn:** [your-linkedin-profile](https://www.linkedin.com/in/animeshk452)  
 **GitHub:** [Animesh452](https://github.com/Animesh452)  
 **Portfolio:** [akuma509.github.io](https://animesh452.github.io)
 
@@ -54,7 +54,7 @@ I typically respond to emails within 24-48 hours. For urgent matters, please men
 
 ---
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="mailto:animeshk452@gmail.com" style="background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; margin-right: 1rem;">Send Email</a>
-  <a href="https://linkedin.com/in/your-profile" style="background: #0077b5; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none;">LinkedIn</a>
+<div class="button-row">
+  <a class="button" href="mailto:animeshk452@gmail.com">Send Email</a>
+  <a class="button button--secondary" href="https://linkedin.com/in/your-profile">LinkedIn</a>
 </div>
