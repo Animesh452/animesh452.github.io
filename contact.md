@@ -18,9 +18,9 @@ I'm always interested in discussing new opportunities, collaborations, and innov
 
 ### 🌐 Connect Online
 
-**LinkedIn:** [your-linkedin-profile](https://www.linkedin.com/in/animeshk452)  
+**LinkedIn:** [Animesh Kumar](https://www.linkedin.com/in/animeshk452)  
 **GitHub:** [Animesh452](https://github.com/Animesh452)  
-**Portfolio:** [akuma509.github.io](https://animesh452.github.io)
+**Portfolio:** [Animesh's Portfolio](https://animesh452.github.io)
 
 ---
 
