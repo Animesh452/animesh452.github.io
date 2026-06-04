@@ -9,8 +9,10 @@ permalink: /publications/
 ## 📄 Conference Papers
 
 ### Real-time Driver Monitoring using Facial Landmarks and Deep Learning
-**Authors:** Animesh Kumar et al.  
+**Authors:** Soham Joshi, Shankaran Venugopalan, **Animesh Kumar**, Shweta Kukade, Mokshit Lodha, Sumitra Motade  
 **Conference:** 2024 International Conference on Advances in Computing, Communication and Applied Informatics (ACCAI)  
+**Publisher:** IEEE  
+**DOI:** [10.1109/ACCAI61061.2024.10602453](https://doi.org/10.1109/ACCAI61061.2024.10602453)  
 **Year:** 2024
 
 **Abstract:** Developed real-time computer vision system utilizing facial landmark analysis and deep learning. System achieved 92% accuracy in closed-eye detection, 87% for yawning, and 89% for smoking classification. Enhanced road safety through continuous monitoring of driver attentiveness and concentration.
