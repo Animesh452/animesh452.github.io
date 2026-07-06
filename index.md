@@ -74,11 +74,11 @@ title: Home
 
 <div class="hero-copy" markdown="1">
 
-<p class="hero-tagline">AI • ML • Retrieval Systems • Data Processing</p>
+<p class="hero-tagline">AI • ML • Agentic Systems • LLM Engineering</p>
 
 # Animesh Kumar
 
-<p class="hero-intro">MS Computer Science student at Arizona State University building AI/ML systems that connect strong models with practical, reliable software.</p>
+<p class="hero-intro">MS Computer Science (GPA 4.0, Arizona State University) building production AI systems — agentic pipelines, fine-tuned models, and full-stack LLM applications.</p>
 
 <div class="button-row hero-actions">
   <a class="button" href="/projects/">View Projects</a>
@@ -99,43 +99,43 @@ title: Home
 
 <article class="featured-project" markdown="1">
 
-### Recon - Automated Job Search Pipeline
+### MatchDay — World Cup 2026 AI Assistant
+
+**Built for:** Google Cloud Rapid Agent Hackathon (MongoDB partner track)
+
+Multi-tool AI agent for the FIFA World Cup 2026 fan experience — live match data, trip planning, fantasy predictions, match reminders, and head-to-head history. Custom tool-calling loop, RAG via Discovery Engine, persistent state via MongoDB MCP. Deployed on Cloud Run.
+
+**Tech Stack:** Python, FastAPI, Gemini (Vertex AI), MongoDB Atlas, GCP Cloud Run, Discovery Engine
+
+[Learn More →](/projects/matchday/) | [Live Demo →](https://wc2026-agent-623255749732.us-central1.run.app/)
+
+</article>
+
+<article class="featured-project" markdown="1">
+
+### Support Ticket Router + Responder
+
+**Achievement:** 99.9% classification accuracy, trained on ASU's A100 supercomputer
+
+End-to-end ML system for customer support triage. Fine-tuned DistilBERT for fast classification + Llama 3.2 3B with QLoRA for response generation. Only 0.6% of parameters trained — 37MB adapter vs 6GB full model. Trained via SLURM on ASU Sol.
+
+**Tech Stack:** Python, DistilBERT, Llama 3.2 3B, QLoRA, bitsandbytes, Weights & Biases, SLURM
+
+[Learn More →](/projects/ticket-router/) | [Live Demo →](https://huggingface.co/spaces/AnimeshK509/ticket-router)
+
+</article>
+
+<article class="featured-project" markdown="1">
+
+### Recon — Automated Job Search Pipeline
 
 **Focus:** Automated job search with LLM-based screening
 
-Built an applied AI pipeline for automated job discovery, LLM-based screening, and human-reviewed role triage.
+Built an applied AI pipeline for automated job discovery, LLM-based screening, resume tailoring, and human-reviewed role triage.
 
 **Tech Stack:** Python, LLM APIs, web automation, human-in-the-loop review
 
 [Learn More →](/projects/recon/)
-
-</article>
-
-<article class="featured-project" markdown="1">
-
-### 🏀 Courtside - AI Sports Assistant
-
-**Achievement:** Production AI system with agentic tool calling and RAG
-
-Full-stack AI assistant that autonomously handles sports queries, sets reminders, and provides deep insights using on-demand Wikipedia RAG. Deployed on Render with persistent storage and real-time email notifications.
-
-**Tech Stack:** Python, FastAPI, Gemini 2.5 Flash, PostgreSQL, APScheduler
-
-[Learn More →](/courtside/) | [Live Demo →](https://courtside-1uqy.onrender.com)
-
-</article>
-
-<article class="featured-project" markdown="1">
-
-### 📊 STaB-RAG: Weighted Multi-Signal Retrieval
-
-**Focus:** Improving table retrieval ranking for RAG systems
-
-Proposed a weighted reranking pipeline combining dense, lexical (BM25), and structural signals for semi-structured table retrieval. Evaluated on NQ-Tables using BEIR benchmarks, achieving strong gains in early precision metrics.
-
-**Tech Stack:** Python, Information Retrieval, RAG, BM25, Dense Embeddings
-
-[Learn More →](/projects/stab-rag/)
 
 </article>
 
@@ -149,9 +149,9 @@ Proposed a weighted reranking pipeline combining dense, lexical (BM25), and stru
 
 <div class="about-narrative" markdown="1">
 
-I build AI systems that turn models, data, and product ideas into software people can actually use. As an MS Computer Science student at Arizona State University, my work sits at the intersection of machine learning, retrieval-augmented generation, computer vision, and distributed systems.
+I build AI systems that turn models, data, and product ideas into software people can actually use. As a recent MS Computer Science graduate from Arizona State University (GPA 4.0, May 2026), my work sits at the intersection of agentic AI, LLM engineering, fine-tuning, and production deployment.
 
-I care about practical impact: systems that answer real questions, support better decisions, and keep working beyond the demo. My strength is combining ML depth with systems thinking, from research prototypes to full-stack engineering and production-ready workflows.
+I care about practical impact: systems that answer real questions, support better decisions, and keep working beyond the demo. My strength is combining ML depth with systems thinking — from research prototypes to full-stack engineering and production-ready workflows.
 
 </div>
 
